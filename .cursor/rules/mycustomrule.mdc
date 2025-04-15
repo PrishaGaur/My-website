@@ -1,0 +1,110 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+This is the landing page for Schedule Maker App. To build this landing page we will use HTML, CSS and Java Script.
+
+## Landing Page Goals
+- Convert visitors into app users
+- Clearly communicate core value proposition for students
+- Showcase key features with visual examples
+- Create a clean, organized aesthetic that reflects the app's purpose
+
+## HTML Structure
+- Use semantic HTML5 elements (header, nav, main, section, footer)
+- Implement proper heading hierarchy (h1, h2, h3)
+- Include schema.org markup for improved SEO
+- Ensure all interactive elements have appropriate ARIA attributes
+- Create logical tab order for keyboard navigation
+
+## CSS Guidelines
+- Implement a responsive design that works on all device sizes
+- Use CSS Grid and Flexbox for layout
+- Define a consistent color palette that evokes focus and organization
+- Maintain a clean typography system with no more than 2-3 font families
+- Use CSS variables for theme colors, spacing, and typography
+- Include smooth transitions and subtle animations for interactive elements
+
+## JavaScript Guidelines
+- Minimize JavaScript for the landing page - keep it lightweight
+- Use vanilla JavaScript where possible
+- Implement lazy loading for images and videos
+- Create smooth scroll behavior for navigation links
+- Add minimal interactive elements that showcase app functionality
+
+## Landing Page Sections
+1. **Hero Section**
+   - Compelling headline focusing on student organization
+   - Brief subheading explaining core value proposition
+   - Primary CTA button (e.g., "Start Organizing Today" or "Try Free Version")
+   - Hero image showing app interface on multiple devices
+
+2. **Features Showcase**
+   - Visual grid of key features with icons and brief descriptions
+   - Focus on: Calendar, To-do lists, Focus mode, Progress tracking
+   - Use interactive elements to demonstrate how features work
+
+3. **User Benefits Section**
+   - Address pain points: forgetting tasks, losing focus, feeling overwhelmed
+   - Show transformation: from stressed to organized student
+   - Include relevant statistics on productivity improvements
+
+4. **How It Works**
+   - Simple step-by-step guide with illustrations
+   - Demonstrate ease of getting started
+   - Show integration into student workflow
+
+5. **Testimonials**
+   - Quotes from student users highlighting different use cases
+   - Include diverse representation of student types
+   - Focus on specific results and improvements
+
+6. **Pricing Section**
+   - Clear comparison of free vs. premium tiers
+   - Highlight value of premium features
+   - Include prominent CTA buttons for each tier
+
+7. **FAQ Section**
+   - Address common questions about functionality, data privacy, etc.
+   - Use accordion or tabbed interface for clean organization
+   - Include link to more comprehensive support resources
+
+8. **Footer**
+   - App download links
+   - Social media links
+   - Privacy policy and terms of service
+   - Contact information
+
+## Performance Guidelines
+- Optimize all images for web (WebP format with fallbacks)
+- Aim for a perfect Lighthouse performance score
+- Implement critical CSS for above-the-fold content
+- Minimize third-party scripts and dependencies
+- Set appropriate cache headers for static assets
+
+## SEO Considerations
+- Create unique, descriptive title and meta description
+- Implement proper canonical tags
+- Use descriptive alt text for all images
+- Include relevant keywords naturally in content
+- Implement Open Graph and Twitter card meta tags for social sharing
+
+## Analytics Implementation
+- Set up event tracking for all CTA buttons
+- Track scroll depth to measure content engagement
+- Implement funnel visualization for sign-up process
+- Set up A/B testing capability for headline variations
+
+## Accessibility Requirements
+- Maintain WCAG 2.1 AA compliance
+- Ensure color contrast ratios meet accessibility standards
+- Provide text alternatives for all non-text content
+- Ensure all functionality is keyboard accessible
+- Test with screen readers for proper navigation
+
+## Additional Elements
+- Add subtle micro-interactions to increase engagement
+- Include a newsletter signup for product updates
+- Implement a chatbot or help widget for immediate assistance
+- Add social proof elements (download counts, user ratings)
