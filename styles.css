@@ -140,66 +140,6 @@ body {
     margin-bottom: 1rem;
 }
 
-.pricing {
-    padding: 4rem 2rem;
-}
-
-.pricing h2 {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.pricing-cards {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.price-card {
-    background-color: var(--white);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    flex: 1;
-    max-width: 300px;
-}
-
-.price-card.featured {
-    transform: scale(1.05);
-    border: 2px solid var(--primary-color);
-}
-
-.price-card h3 {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.price {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.price-card ul {
-    list-style: none;
-    margin-bottom: 2rem;
-}
-
-.price-card ul li {
-    margin-bottom: 0.5rem;
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-.price-card ul li::before {
-    content: "✓";
-    color: var(--primary-color);
-    position: absolute;
-    left: 0;
-}
-
 .footer {
     background-color: var(--secondary-color);
     color: var(--white);
