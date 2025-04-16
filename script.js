@@ -49,4 +49,44 @@ window.addEventListener('scroll', () => {
         header.classList.add('scroll-up');
     }
     lastScroll = currentScroll;
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const waitlistForm = document.getElementById('waitlistForm');
+    const waitlistEmail = document.getElementById('waitlistEmail');
+    const waitlistMessage = document.getElementById('waitlistMessage');
+
+    // Get existing waitlist from localStorage or initialize empty array
+    const getWaitlist = () => {
+        const waitlist = localStorage.getItem('waitlist');
+        return waitlist ? JSON.parse(waitlist) : [];
+    };
+
+    // Save email to waitlist
+    const saveToWaitlist = (email) => {
+        const waitlist = getWaitlist();
+        if (waitlist.includes(email)) {
+            throw new Error('This email is already on the waitlist!');
+        }
+        waitlist.push(email);
+        localStorage.setItem('waitlist', JSON.stringify(waitlist));
+    };
+
+    // Handle form submission
+    waitlistForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const email = waitlistEmail.value.trim();
+        waitlistMessage.className = 'waitlist-message';
+        
+        try {
+            saveToWaitlist(email);
+            waitlistMessage.textContent = 'Thank you! You have been added to the waitlist.';
+            waitlistMessage.classList.add('success');
+            waitlistForm.reset();
+        } catch (error) {
+            waitlistMessage.textContent = error.message;
+            waitlistMessage.classList.add('error');
+        }
+    });
 }); 
