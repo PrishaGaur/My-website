@@ -73,17 +73,34 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Handle form submission
-    waitlistForm.addEventListener('submit', (e) => {
+    waitlistForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
         const email = waitlistEmail.value.trim();
         waitlistMessage.className = 'waitlist-message';
         
         try {
+            // Save to localStorage
             saveToWaitlist(email);
-            waitlistMessage.textContent = 'Thank you! You have been added to the waitlist.';
-            waitlistMessage.classList.add('success');
-            waitlistForm.reset();
+            
+            // Send to Google Sheet
+            const response = await fetch('YOUR_GOOGLE_APPS_SCRIPT_URL', {
+                method: 'POST',
+                body: JSON.stringify({ email: email }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            
+            const result = await response.json();
+            
+            if (result.status === 'success') {
+                waitlistMessage.textContent = 'Thank you! You have been added to the waitlist.';
+                waitlistMessage.classList.add('success');
+                waitlistForm.reset();
+            } else {
+                throw new Error('Failed to add to waitlist. Please try again.');
+            }
         } catch (error) {
             waitlistMessage.textContent = error.message;
             waitlistMessage.classList.add('error');
